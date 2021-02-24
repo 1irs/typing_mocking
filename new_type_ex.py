@@ -10,4 +10,7 @@ def get_user_name(user_id: UserId) -> str:
 user_a = get_user_name(UserId(42351))
 
 # does not typecheck; an int is not a UserId
-user_b = get_user_name(1)
+user_b = get_user_name(UserId(1))
+
+# user_c = get_user_name("asdf")
+
