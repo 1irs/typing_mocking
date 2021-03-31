@@ -1,16 +1,22 @@
-from typing import NewType
+from typing import NewType, Union
 
 UserId = NewType('UserId', int)
+AccountId = NewType('AccountId', str)
+ProfileId = NewType('ProfileId', str)
+
 some_id = UserId(524313)
 
-def get_user_name(user_id: UserId) -> str:
+def find_account(entity_id: AccountId):
     pass
 
-# typechecks
-user_a = get_user_name(UserId(42351))
+def find_profile(entity_id: ProfileId):
+    pass
 
-# does not typecheck; an int is not a UserId
-user_b = get_user_name(UserId(1))
+id1: AccountId = AccountId('123')
+id2: ProfileId = ProfileId('234')
 
-# user_c = get_user_name("asdf")
+find_account(id1)
+find_profile(id2)
+
+
 
