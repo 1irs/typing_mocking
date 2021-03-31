@@ -13,5 +13,5 @@ pipelines:
           script:
             - pip install mypy
             - ./run_mypy.sh
-            - python -m unitest discover .
+            - python -m unittest discover .
 
