@@ -1,1 +1,5 @@
 mypy
+
+requests~=2.25.1
+SQLAlchemy~=1.4.11
+psycopg2-binary
